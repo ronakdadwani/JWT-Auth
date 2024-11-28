@@ -31,7 +31,7 @@ const userSchema = new Schema({
     timestamps : true
 });
 
-userSchema.methods = {
+userSchema.methods = {      
     jwtToken() {
         return JWT.sign(
             {id : this._id , email: this.email },
